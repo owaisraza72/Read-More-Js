@@ -18,7 +18,7 @@
 
   <script>
 
-    let msg = "The Pakistan Army is the land-based military force of Pakistan and serves as a vital pillar of the country’s defense and sovereignty. Established in 1947 following the independence of Pakistan, the army has played a crucial role in safeguarding the nation’s borders, maintaining internal stability, and contributing to national development. Comprising highly trained soldiers, officers, and specialized units, the Pakistan Army is renowned for its discipline, strategic capabilities, and resilience in facing regional and global challenges. It operates under the Ministry of Defence and is led by the Chief of Army Staff, who is responsible for ensuring readiness and operational effectiveness. The army’s primary mission includes defending Pakistan’s territorial integrity against external threats, such as India, with whom Pakistan shares a complex and historically tense relationship. Beyond conventional warfare, the Pakistan Army is also actively involved in counter-terrorism operations, disaster relief efforts, and peacekeeping missions across the world under the United Nations banner."
+    let msg = "The Pakistan Army is the land-based military force of Pakistan and serves as a vital pillar of the country’s defense and sovereignty. Established in 1947 following the independence of Pakistan, the army has played a crucial role in safeguarding the nation’s borders, maintaining internal stability, and contributing to national development. Comprising highly trained soldiers, officers, and specialized units, the Pakistan Army is renowned for its discipline, strategic capabilities, and resilience in facing regional and global challenges. It operates under the Ministry of Defence and is led by the Chief of Army Staff, who is responsible for ensuring readiness and operational effectiveness. "
 
     let show = document.getElementById('show');
 
@@ -51,7 +51,7 @@
 
 
       if (text.length > 300) {
-        show.innerHTML = `<p>${text.slice(0, 600)}...<button onclick="ok()">Read More</button></p>`
+        show.innerHTML = `<p>${text.slice(0, 600)}...<button onclick="or()">Read More</button></p>`
 
       }
     }
@@ -59,10 +59,17 @@
 
 
 
+    function or() {
+      if (text.length > 300) {
+        show.innerHTML = `<p>${text.slice(0, 695)}...<button onclick="ok()">Show Less</button></p>`
+      }
+    }
+
     function ok() {
       if (text.length > 300) {
-        show.innerHTML = `<p>${text}</p>Thanks`
+        show.innerHTML = `<p>${text.slice(0, 300)}...<button onclick="more()">Read More</button></p>`
       }
+
     }
 
 
